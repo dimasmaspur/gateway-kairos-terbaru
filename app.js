@@ -77,7 +77,7 @@ app.use('/api/e_do/unpaid', unpaidRouter);
 
 // kairos
 app.use('/data-partner', verifyToken, can("admin","marketing"), dataPartner);
-app.use('/data-cost', verifyToken, can("admin"), dataCost);
+app.use('/data-cost', verifyToken, can("admin","marketing"), dataCost);
 app.use('/data-port', verifyToken, can("admin","marketing"), dataPort);
 app.use('/data-branch', verifyToken, can("admin"), dataBranch);
 app.use('/job-order', verifyToken, can("admin"), joRouter);
